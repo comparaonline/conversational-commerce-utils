@@ -1,5 +1,5 @@
 {
-  "name": "@comparaonline/conversation-commerce-utils",
+  "name": "@comparaonline/conversational-commerce-utils",
   "version": "0.2.0",
   "description": "utils for conversational commerce at comparaonline.com",
   "main": "build/index.js",

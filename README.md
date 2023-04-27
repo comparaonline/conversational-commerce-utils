@@ -1,6 +1,6 @@
 # README
 
-## @comparaonline/conversation-commerce-utils
+## @comparaonline/conversational-commerce-utils
 
 This package contains utility functions for conversational commerce at ComparaOnline.com. It includes functionality for formatting, validating, and parsing phone and email data.
 
@@ -9,7 +9,7 @@ This package contains utility functions for conversational commerce at ComparaOn
 To use this package, you can install it via NPM:
 
 ```
-npm install --save @comparaonline/conversation-commerce-utils
+npm install --save @comparaonline/conversational-commerce-utils
 ```
 
 ### Usage
@@ -19,7 +19,7 @@ npm install --save @comparaonline/conversation-commerce-utils
 To sanitize phone and email data, you can use the following functions:
 
 ```
-import { phoneSanitize, emailSanitize } from '@comparaonline/conversation-commerce-utils';
+import { phoneSanitize, emailSanitize } from '@comparaonline/conversational-commerce-utils';
 
 const sanitizedPhone = phoneSanitize('123-456-7890');
 const sanitizedEmail = emailSanitize('TEST@EXAMPLE.COM');
@@ -32,7 +32,7 @@ const sanitizedEmail = emailSanitize('TEST@EXAMPLE.COM');
 To validate email addresses, you can use the `isEmailValid` function:
 
 ```
-import { isEmailValid } from '@comparaonline/conversation-commerce-utils';
+import { isEmailValid } from '@comparaonline/conversational-commerce-utils';
 
 const isValidEmail = isEmailValid('test@example.com');
 ```
@@ -48,7 +48,7 @@ const isValidEmail = isEmailValid('test@example.com');
 To parse phone numbers from different countries and formats, you can use the `phoneParser` function:
 
 ```
-import { phoneParser } from '@comparaonline/conversation-commerce-utils';
+import { phoneParser } from '@comparaonline/conversational-commerce-utils';
 
 const parsedPhone = phoneParser('+1 (555) 123-4567');
 ```
