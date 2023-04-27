@@ -24,7 +24,7 @@ pipeline {
     stage('Build') {
       when {
         anyOf {
-          branch 'master'
+          branch 'main'
           branch 'release'
         }
       }
@@ -37,7 +37,7 @@ pipeline {
     stage('Publish') {
       when {
         allOf {
-          branch 'master'
+          branch 'main'
           expression { return new_version() }
         }
       }
