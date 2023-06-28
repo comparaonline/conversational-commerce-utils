@@ -69,7 +69,9 @@ def new_version() {
 }
 
 def publish() {
-  sh 'npm publish'
-  sh "git tag -a 'v${package_version()}' -m 'npm version v${package_version()}'"
-  sh "git push origin 'v${package_version()}'"
+  return nvm(env.NODE_VERSION) {
+    sh 'npm publish'
+    sh "git tag -a 'v${package_version()}' -m 'npm version v${package_version()}'"
+    sh "git push origin 'v${package_version()}'"
+  }
 }
