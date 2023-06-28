@@ -47,17 +47,21 @@ pipeline {
 }
 
 def published_version() {
-  return sh(
-      script: 'npm view $(jq -r .name < package.json) version',
-      returnStdout: true
-  ).trim()
+  return nvm(env.NODE_VERSION) {
+    sh(
+        script: 'npm view $(jq -r .name < package.json) version',
+        returnStdout: true
+    ).trim()
+  }
 }
 
 def package_version() {
-  return sh(
+  return nvm(env.NODE_VERSION) {
+    sh(
       script: 'jq -r .version < package.json',
       returnStdout: true
-  ).trim()
+    ).trim()
+  }
 }
 
 def new_version() {
