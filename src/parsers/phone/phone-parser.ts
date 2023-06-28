@@ -7,6 +7,8 @@ import parsePhoneNumber from 'libphonenumber-js';
  * @param rawNumber receive a phone number sanitized
  */
 export const phoneParser = (rawNumber: string): IUserPhone | undefined => {
+  if (!rawNumber) return;
+
   const phoneToParse = rawNumber.startsWith('+') ? rawNumber : `+${rawNumber}`;
   const parser = parsePhoneNumber(phoneToParse);
 

@@ -63,8 +63,17 @@ describe('phoneParser', () => {
 
   it('should return undefined when phone number is invalid', () => {
     // arrange
-    const number = '';
+    const number = 'invalid_phone_number';
 
+    // act
+    const result = phoneParser(number);
+
+    // assert
+    expect(result).toBeUndefined();
+    expect(mockPatch).toBeCalledTimes(0);
+  });
+
+  it.each([undefined, null, ''])(`should return undefined when phone number is %s`, (number) => {
     // act
     const result = phoneParser(number);
 
