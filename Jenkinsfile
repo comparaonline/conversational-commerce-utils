@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'jenkins-gcp-ubuntu20' }
+  agent { label 'kubernetes' }
   options {
     timeout(time: 30, unit: 'MINUTES')
   }
